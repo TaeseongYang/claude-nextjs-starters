@@ -1,0 +1,93 @@
+- generic [ref=e1]:
+  - generic [ref=e2]:
+    - complementary [ref=e3]:
+      - link "S StarterKit" [ref=e5] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e6]:
+          - generic [ref=e7]: S
+          - generic [ref=e8]: StarterKit
+      - navigation [ref=e9]:
+        - link "Dashboard" [ref=e10] [cursor=pointer]:
+          - /url: /dashboard
+        - link "Projects" [active] [ref=e11] [cursor=pointer]:
+          - /url: /dashboard/projects
+        - link "Settings" [ref=e12] [cursor=pointer]:
+          - /url: /dashboard/settings
+      - generic [ref=e14]: © 2024 StarterKit
+    - main [ref=e16]:
+      - generic [ref=e116]:
+        - generic [ref=e117]:
+          - generic [ref=e118]:
+            - heading "프로젝트" [level=1] [ref=e119]
+            - paragraph [ref=e120]: 팀의 모든 프로젝트를 한눈에 확인하고 관리합니다.
+          - button "새 프로젝트" [ref=e121]
+        - generic [ref=e122]:
+          - generic [ref=e123]:
+            - generic [ref=e124]:
+              - generic [ref=e125]:
+                - generic [ref=e126]: 총 프로젝트
+                - generic [ref=e127]: 모든 프로젝트
+              - img [ref=e129]
+            - generic [ref=e132]: "4"
+          - generic [ref=e133]:
+            - generic [ref=e134]:
+              - generic [ref=e135]:
+                - generic [ref=e136]: 활성 프로젝트
+                - generic [ref=e137]: 진행 중인 프로젝트
+              - img [ref=e139]
+            - generic [ref=e141]:
+              - generic [ref=e142]: "2"
+              - paragraph [ref=e143]: ↑ +2
+          - generic [ref=e144]:
+            - generic [ref=e145]:
+              - generic [ref=e146]:
+                - generic [ref=e147]: 완료된 프로젝트
+                - generic [ref=e148]: 완료된 프로젝트
+              - img [ref=e150]
+            - generic [ref=e153]:
+              - generic [ref=e154]: "1"
+              - paragraph [ref=e155]: ↑ +1
+        - generic [ref=e156]:
+          - generic [ref=e157]:
+            - generic [ref=e159]:
+              - generic [ref=e160]:
+                - generic [ref=e161]: Web App 리뉴얼
+                - generic [ref=e162]: 기존 웹 애플리케이션의 UI/UX를 개선하고 성능을 최적화하는 프로젝트입니다.
+              - generic [ref=e163]: 진행 중
+            - generic [ref=e165]:
+              - generic [ref=e166]: 팀원 4명
+              - generic [ref=e167]: 2일 전 수정
+            - button "자세히 보기" [ref=e169]
+          - generic [ref=e170]:
+            - generic [ref=e172]:
+              - generic [ref=e173]:
+                - generic [ref=e174]: 모바일 앱 개발
+                - generic [ref=e175]: React Native를 사용한 iOS/Android 크로스플랫폼 모바일 애플리케이션 개발
+              - generic [ref=e176]: 진행 중
+            - generic [ref=e178]:
+              - generic [ref=e179]: 팀원 3명
+              - generic [ref=e180]: 5일 전 수정
+            - button "자세히 보기" [ref=e182]
+          - generic [ref=e183]:
+            - generic [ref=e185]:
+              - generic [ref=e186]:
+                - generic [ref=e187]: 데이터 파이프라인 구축
+                - generic [ref=e188]: ETL 프로세스를 통한 데이터 수집 및 분석 파이프라인 구축
+              - generic [ref=e189]: 일시중지
+            - generic [ref=e191]:
+              - generic [ref=e192]: 팀원 2명
+              - generic [ref=e193]: 1주 전 수정
+            - button "자세히 보기" [ref=e195]
+          - generic [ref=e196]:
+            - generic [ref=e198]:
+              - generic [ref=e199]:
+                - generic [ref=e200]: API 서버 v2
+                - generic [ref=e201]: RESTful API를 GraphQL로 마이그레이션하고 성능을 개선
+              - generic [ref=e202]: 완료
+            - generic [ref=e204]:
+              - generic [ref=e205]: 팀원 5명
+              - generic [ref=e206]: 2주 전 수정
+            - button "자세히 보기" [ref=e208]
+  - button "Open Next.js Dev Tools" [ref=e112] [cursor=pointer]:
+    - img [ref=e113]
+  - alert [ref=e209]: 프로젝트 | StarterKit

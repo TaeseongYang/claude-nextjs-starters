@@ -1,0 +1,89 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - complementary [ref=e3]:
+      - link "S StarterKit" [ref=e5] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e6]:
+          - generic [ref=e7]: S
+          - generic [ref=e8]: StarterKit
+      - navigation [ref=e9]:
+        - link "Dashboard" [ref=e10] [cursor=pointer]:
+          - /url: /dashboard
+        - link "Projects" [ref=e11] [cursor=pointer]:
+          - /url: /dashboard/projects
+        - link "Settings" [ref=e12] [cursor=pointer]:
+          - /url: /dashboard/settings
+      - generic [ref=e14]: © 2024 StarterKit
+    - main [ref=e16]:
+      - generic [ref=e17]:
+        - generic [ref=e18]:
+          - heading "대시보드" [level=1] [ref=e19]
+          - paragraph [ref=e20]: 환영합니다! 여기서 모든 주요 지표를 확인할 수 있습니다.
+        - generic [ref=e21]:
+          - generic [ref=e22]:
+            - generic [ref=e23]:
+              - generic [ref=e24]:
+                - generic [ref=e25]: 총 사용자
+                - generic [ref=e26]: 월 순증가
+              - img [ref=e28]
+            - generic [ref=e33]:
+              - generic [ref=e34]: 12,543
+              - paragraph [ref=e35]: ↑ +2.5%
+          - generic [ref=e36]:
+            - generic [ref=e37]:
+              - generic [ref=e38]:
+                - generic [ref=e39]: 활성 세션
+                - generic [ref=e40]: 현재 진행 중
+              - img [ref=e42]
+            - generic [ref=e44]:
+              - generic [ref=e45]: 2,873
+              - paragraph [ref=e46]: ↑ +12.1%
+          - generic [ref=e47]:
+            - generic [ref=e48]:
+              - generic [ref=e49]:
+                - generic [ref=e50]: 매출
+                - generic [ref=e51]: 이번 달
+              - img [ref=e53]
+            - generic [ref=e56]:
+              - generic [ref=e57]: $45,321
+              - paragraph [ref=e58]: ↑ +8.2%
+          - generic [ref=e59]:
+            - generic [ref=e60]:
+              - generic [ref=e61]:
+                - generic [ref=e62]: 평균 응답시간
+                - generic [ref=e63]: API 응답
+              - img [ref=e65]
+            - generic [ref=e68]:
+              - generic [ref=e69]: 234ms
+              - paragraph [ref=e70]: ↓ -3.2%
+        - generic [ref=e71]:
+          - generic [ref=e73]:
+            - generic [ref=e74]:
+              - generic [ref=e75]: 최근 활동
+              - generic [ref=e76]: 최근 업데이트된 활동 목록
+            - generic [ref=e78]:
+              - generic [ref=e80]:
+                - generic [ref=e81]:
+                  - paragraph [ref=e82]: 프로젝트 생성
+                  - paragraph [ref=e83]: 새로운 프로젝트 "Web App"이 생성되었습니다
+                - generic [ref=e84]: 2시간 전
+              - generic [ref=e86]:
+                - generic [ref=e87]:
+                  - paragraph [ref=e88]: 파일 업로드
+                  - paragraph [ref=e89]: avatar.png 파일이 업로드되었습니다
+                - generic [ref=e90]: 4시간 전
+              - generic [ref=e92]:
+                - generic [ref=e93]:
+                  - paragraph [ref=e94]: 설정 변경
+                  - paragraph [ref=e95]: 알림 설정이 변경되었습니다
+                - generic [ref=e96]: 1일 전
+              - generic [ref=e98]:
+                - generic [ref=e99]:
+                  - paragraph [ref=e100]: 팀 초대
+                  - paragraph [ref=e101]: 3명의 팀원이 추가되었습니다
+                - generic [ref=e102]: 3일 전
+          - generic [ref=e104]:
+            - heading "빠른 팁" [level=3] [ref=e105]
+            - paragraph [ref=e106]: 이 대시보드는 프로덕션 레벨의 구성 요소로 만들어진 예시입니다. 자유롭게 커스터마이징하세요!
+  - button "Open Next.js Dev Tools" [ref=e112] [cursor=pointer]:
+    - img [ref=e113]
