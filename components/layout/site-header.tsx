@@ -1,5 +1,6 @@
 'use client'
 
+import { useEffect, useState } from 'react'
 import { useWindowScroll } from 'react-use'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
@@ -13,7 +14,11 @@ import { cn } from '@/lib/utils'
 
 export function SiteHeader() {
   const { y } = useWindowScroll()
-  const isScrolled = y ? y > 10 : false
+  const [isScrolled, setIsScrolled] = useState(false)
+
+  useEffect(() => {
+    setIsScrolled(y > 10)
+  }, [y])
 
   return (
     <header
