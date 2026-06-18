@@ -25,6 +25,10 @@ export const MAIN_NAV: NavItem[] = [
     external: true,
   },
   {
+    label: '로그인',
+    href: '/login',
+  },
+  {
     label: 'Dashboard',
     href: '/dashboard',
   },

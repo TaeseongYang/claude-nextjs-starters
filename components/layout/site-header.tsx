@@ -39,6 +39,9 @@ export function SiteHeader() {
 
           <div className="flex items-center gap-4">
             <ThemeToggle />
+            <Link href="/login" className="hidden sm:inline-block">
+              <Button size="sm" variant="ghost">로그인</Button>
+            </Link>
             <Link href="/dashboard" className="hidden sm:inline-block">
               <Button size="sm">Dashboard</Button>
             </Link>
