@@ -1,0 +1,178 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - generic [ref=e5]:
+        - link "S StarterKit" [ref=e6] [cursor=pointer]:
+          - /url: /
+          - generic [ref=e7]:
+            - generic [ref=e8]: S
+            - generic [ref=e9]: StarterKit
+        - navigation [ref=e10]:
+          - link "Features" [ref=e11] [cursor=pointer]:
+            - /url: /#features
+          - link "Docs" [ref=e12] [cursor=pointer]:
+            - /url: https://nextjs.org
+          - link "로그인" [ref=e13] [cursor=pointer]:
+            - /url: /login
+          - link "Dashboard" [ref=e14] [cursor=pointer]:
+            - /url: /dashboard
+        - generic [ref=e15]:
+          - link "로그인" [ref=e17] [cursor=pointer]:
+            - /url: /login
+            - button "로그인" [ref=e18]
+          - link "Dashboard" [ref=e19] [cursor=pointer]:
+            - /url: /dashboard
+            - button "Dashboard" [ref=e20]
+    - main [ref=e21]:
+      - generic [ref=e24]:
+        - generic [ref=e25]: NEW - v1.0 출시
+        - generic [ref=e26]:
+          - heading "모던 Next.js 스타터킷" [level=1] [ref=e27]
+          - paragraph [ref=e28]: TypeScript, Tailwind CSS, shadcn/ui로 만들어진 프로덕션 레디 스타터. 몇 분 안에 완벽한 웹 앱을 시작하세요.
+        - generic [ref=e29]:
+          - link "특징 보기" [ref=e30] [cursor=pointer]:
+            - /url: /#features
+            - button "특징 보기" [ref=e31]:
+              - text: 특징 보기
+              - img
+          - link "대시보드 둘러보기" [ref=e32] [cursor=pointer]:
+            - /url: /dashboard
+            - button "대시보드 둘러보기" [ref=e33]
+        - generic [ref=e40]:
+          - generic [ref=e41]: "1 import {Button} from '@/components/ui/button'"
+          - generic [ref=e42]: "2 import {Zap} from 'lucide-react'"
+          - generic [ref=e43]: "3"
+          - generic [ref=e44]: "4 export function MyComponent() {"
+          - generic [ref=e45]: 5 return (
+          - generic [ref=e46]: 6 <div>
+          - generic [ref=e47]: 7 <Button>클릭하세요</Button>
+          - generic [ref=e48]: 8 </div>
+          - generic [ref=e49]: 9 )
+          - generic [ref=e50]: "10 }"
+      - generic [ref=e53]:
+        - generic [ref=e54]:
+          - generic [ref=e55]: 99.9%
+          - generic [ref=e56]: Uptime
+          - paragraph [ref=e57]: Enterprise-grade reliability
+        - generic [ref=e58]:
+          - generic [ref=e59]: <100ms
+          - generic [ref=e60]: Response Time
+          - paragraph [ref=e61]: Lightning-fast performance
+        - generic [ref=e62]:
+          - generic [ref=e63]: 50K+
+          - generic [ref=e64]: Monthly Active Users
+          - paragraph [ref=e65]: Growing community
+        - generic [ref=e66]:
+          - generic [ref=e67]: 4.9/5
+          - generic [ref=e68]: Average Rating
+          - paragraph [ref=e69]: Trusted by developers
+      - generic [ref=e71]:
+        - generic [ref=e72]:
+          - generic [ref=e73]: 주요 기능
+          - heading "모든 것이 포함되어 있습니다" [level=2] [ref=e74]
+          - paragraph [ref=e75]: 프로덕션 레벨의 웹 애플리케이션 개발을 위한 모든 필수 기능과 최적화가 준비되어 있습니다.
+        - generic [ref=e76]:
+          - generic [ref=e77]:
+            - generic [ref=e78]:
+              - img [ref=e80]
+              - generic [ref=e82]:
+                - generic [ref=e83]: Lightning Fast
+                - generic [ref=e84]: Performance
+            - generic [ref=e86]: Built with Next.js 16 and optimized for performance. Zero configuration needed.
+          - generic [ref=e87]:
+            - generic [ref=e88]:
+              - img [ref=e90]
+              - generic [ref=e94]:
+                - generic [ref=e95]: Developer Friendly
+                - generic [ref=e96]: Developer
+            - generic [ref=e98]: TypeScript first with strict mode enabled. Excellent developer experience out of the box.
+          - generic [ref=e99]:
+            - generic [ref=e100]:
+              - img [ref=e102]
+              - generic [ref=e108]:
+                - generic [ref=e109]: Beautiful Components
+                - generic [ref=e110]: Design
+            - generic [ref=e112]: Built with shadcn/ui and Tailwind CSS. Fully customizable and production-ready.
+          - generic [ref=e113]:
+            - generic [ref=e114]:
+              - img [ref=e116]
+              - generic [ref=e122]:
+                - generic [ref=e123]: Accessible
+                - generic [ref=e124]: A11y
+            - generic [ref=e126]: WCAG compliant components. Built on Radix UI primitives for maximum accessibility.
+          - generic [ref=e127]:
+            - generic [ref=e128]:
+              - img [ref=e130]
+              - generic [ref=e132]:
+                - generic [ref=e133]: Mobile Ready
+                - generic [ref=e134]: Responsive
+            - generic [ref=e136]: Fully responsive design. Looks great on all devices from mobile to desktop.
+          - generic [ref=e137]:
+            - generic [ref=e138]:
+              - img [ref=e140]
+              - generic [ref=e143]:
+                - generic [ref=e144]: Production Ready
+                - generic [ref=e145]: Ready
+            - generic [ref=e147]: Dark mode support, SEO optimized, and best practices built-in.
+      - generic [ref=e150]:
+        - heading "지금 시작해보세요" [level=2] [ref=e151]
+        - paragraph [ref=e152]: 완벽한 기반을 가지고 여러분의 다음 프로젝트를 시작하세요.
+        - generic [ref=e153]:
+          - link "대시보드 접속" [ref=e154] [cursor=pointer]:
+            - /url: /dashboard
+            - button "대시보드 접속" [ref=e155]
+          - link "GitHub에서 보기" [ref=e156] [cursor=pointer]:
+            - /url: https://github.com
+            - button "GitHub에서 보기" [ref=e157]
+    - contentinfo [ref=e158]:
+      - generic [ref=e159]:
+        - generic [ref=e160]:
+          - generic [ref=e161]:
+            - generic [ref=e162]:
+              - generic [ref=e163]: S
+              - generic [ref=e164]: StarterKit
+            - paragraph [ref=e165]: Modern Next.js 15+ starter template with shadcn/ui, TypeScript, and Tailwind CSS
+          - generic [ref=e166]:
+            - heading "Product" [level=4] [ref=e167]
+            - list [ref=e168]:
+              - listitem [ref=e169]:
+                - link "Features" [ref=e170] [cursor=pointer]:
+                  - /url: /#features
+              - listitem [ref=e171]:
+                - link "Security" [ref=e172] [cursor=pointer]:
+                  - /url: "#"
+          - generic [ref=e173]:
+            - heading "Company" [level=4] [ref=e174]
+            - list [ref=e175]:
+              - listitem [ref=e176]:
+                - link "About" [ref=e177] [cursor=pointer]:
+                  - /url: "#"
+              - listitem [ref=e178]:
+                - link "Blog" [ref=e179] [cursor=pointer]:
+                  - /url: "#"
+              - listitem [ref=e180]:
+                - link "Careers" [ref=e181] [cursor=pointer]:
+                  - /url: "#"
+          - generic [ref=e182]:
+            - heading "Legal" [level=4] [ref=e183]
+            - list [ref=e184]:
+              - listitem [ref=e185]:
+                - link "Privacy" [ref=e186] [cursor=pointer]:
+                  - /url: "#"
+              - listitem [ref=e187]:
+                - link "Terms" [ref=e188] [cursor=pointer]:
+                  - /url: "#"
+              - listitem [ref=e189]:
+                - link "Contact" [ref=e190] [cursor=pointer]:
+                  - /url: "#"
+        - generic [ref=e191]:
+          - paragraph [ref=e192]: © 2024 StarterKit. All rights reserved.
+          - generic [ref=e193]:
+            - link "𝕏" [ref=e194] [cursor=pointer]:
+              - /url: https://twitter.com
+            - link "GitHub" [ref=e195] [cursor=pointer]:
+              - /url: https://github.com
+            - link "LinkedIn" [ref=e196] [cursor=pointer]:
+              - /url: https://linkedin.com
+  - button "Open Next.js Dev Tools" [ref=e202] [cursor=pointer]:
+    - img [ref=e203]

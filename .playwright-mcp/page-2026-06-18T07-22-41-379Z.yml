@@ -1,0 +1,30 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - link "S StarterKit" [ref=e5] [cursor=pointer]:
+      - /url: /
+      - generic [ref=e6]:
+        - generic [ref=e7]: S
+        - generic [ref=e8]: StarterKit
+    - generic [ref=e9]:
+      - generic [ref=e10]:
+        - generic [ref=e11]: 로그인
+        - generic [ref=e12]: 이메일과 비밀번호를 입력해주세요
+      - generic [ref=e14]:
+        - generic [ref=e15]:
+          - generic [ref=e16]: 이메일
+          - textbox "이메일" [invalid] [ref=e17]:
+            - /placeholder: you@example.com
+          - paragraph [ref=e34]: 유효한 이메일을 입력해주세요
+        - generic [ref=e18]:
+          - generic [ref=e19]: 비밀번호
+          - textbox "비밀번호" [invalid] [ref=e20]:
+            - /placeholder: ••••••••
+          - paragraph [ref=e35]: 비밀번호는 8자 이상이어야 합니다
+        - button "로그인하기" [ref=e21]
+      - generic [ref=e22]:
+        - generic [ref=e23]: 계정이 없으신가요?
+        - link "회원가입" [ref=e24] [cursor=pointer]:
+          - /url: /register
+  - button "Open Next.js Dev Tools" [ref=e30] [cursor=pointer]:
+    - img [ref=e31]
+  - alert [ref=e36]
