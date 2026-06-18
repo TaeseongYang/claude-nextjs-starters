@@ -4,15 +4,18 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## 프로젝트 개요
 
-**StarterKit**은 Next.js 15+, React 19, TypeScript, shadcn/ui, Tailwind CSS를 기반으로 한 프로덕션 준비 완료 스타터 템플릿입니다.
+**StarterKit**은 Next.js 16, React 19, TypeScript, shadcn/ui, Tailwind CSS 4를 기반으로 한 프로덕션 준비 완료 스타터 템플릿입니다.
 
-- **Next.js 버전**: 16.2.9 (App Router + Turbopack)
+- **Next.js 버전**: 16.2.9 (App Router, Turbopack)
 - **React 버전**: 19.2.4
 - **TypeScript**: 5.x (strict mode 활성화)
-- **스타일링**: Tailwind CSS 4, shadcn/ui, class-variance-authority
+- **스타일링**: Tailwind CSS 4 (CSS-only 설정, tailwind.config.ts 없음), shadcn/ui, class-variance-authority
+- **폰트**: Geist Sans + Geist Mono (`next/font/google`)
+- **애니메이션**: tw-animate-css
 - **폼 관리**: React Hook Form + Zod
 - **아이콘**: Lucide React
 - **테마**: next-themes (다크모드 지원)
+- **유틸리티 훅**: react-use (useWindowScroll 등)
 
 ## 아키텍처 및 디렉토리 구조
 
@@ -79,21 +82,28 @@ components/
 
 ```
 lib/
-├── constants.ts        # SITE_CONFIG, MAIN_NAV, SIDEBAR_NAV, FEATURES, STATS
+├── constants.ts        # SITE_CONFIG, MAIN_NAV, FOOTER_NAV, SIDEBAR_NAV, FEATURES, STATS
 ├── utils.ts            # cn() - Tailwind merge 유틸리티
 └── validations.ts      # Zod 스키마 (미포함)
 
 types/
-└── index.ts            # SiteConfig, NavItem, FeatureItem, StatsItem 등 공유 타입
+└── index.ts            # SiteConfig, NavItem, FeatureItem, StatsItem, SectionProps 등 공유 타입
 ```
 
 ## 핵심 기술 스택 및 패턴
 
 ### Tailwind CSS + shadcn/ui
 
-- **구성**: shadcn/ui 컴포넌트는 `components/ui/`에 소스로 포함됨 (npm 패키지가 아님)
+- **구성**: Tailwind 4는 `tailwind.config.ts` 없이 `app/globals.css`에서 CSS-only 설정
+  ```css
+  @import "tailwindcss";
+  @import "tw-animate-css";
+  @import "shadcn/tailwind.css";
+  ```
+- **shadcn/ui**: `shadcn` npm 패키지로 설치, 컴포넌트는 `components/ui/`에 소스로 포함됨
 - **클래스 병합**: `lib/utils.ts`의 `cn()` 함수로 Tailwind 클래스 충돌 해결
-- **커스터마이징**: CSS 변수 기반 테마 (Tailwind 4의 `@theme` 구문 사용 가능)
+- **테마 커스터마이징**: CSS 변수 기반 (`@theme inline` 구문), `globals.css`에서 정의
+- **다크모드 변형**: `@custom-variant dark (&:is(.dark *))`로 선언
 
 ### 라우팅
 
@@ -181,8 +191,9 @@ npm run lint
 | 파일 | 목적 |
 |------|------|
 | `next.config.ts` | Next.js 설정 (현재 기본값) |
-| `tsconfig.json` | TypeScript 설정 (strict mode, 경로 별칭) |
-| `tailwind.config.ts` | Tailwind CSS 설정 |
+| `tsconfig.json` | TypeScript 설정 (strict mode, 경로 별칭 `@/*`) |
+| `app/globals.css` | Tailwind 4 CSS 설정 + 테마 CSS 변수 (tailwind.config.ts 없음) |
+| `.mcp.json` | MCP 서버 설정 (playwright, context7, sequential-thinking) |
 | `package.json` | 프로젝트 의존성 및 스크립트 |
 | `lib/constants.ts` | 사이트 설정, 네비게이션, 기능 목록, 통계 |
 
@@ -205,12 +216,25 @@ npm run lint
 | `class-variance-authority` | 컴포넌트 스타일 변형 관리 |
 | `tailwind-merge` | Tailwind 클래스 충돌 해결 |
 | `radix-ui` | 접근성 높은 UI 프리미티브 |
+| `react-use` | 유틸리티 훅 모음 (useWindowScroll 등, SiteHeader 스크롤 감지에 활용) |
+| `tw-animate-css` | Tailwind 4 전용 애니메이션 유틸리티 |
+| `shadcn` | shadcn/ui CLI 패키지 (컴포넌트 추가/관리) |
 
 ## 네비게이션 구조
 
-- **MAIN_NAV** (`lib/constants.ts`): 마케팅 헤더, 모바일 네비게이션에 표시
-- **SIDEBAR_NAV** (`lib/constants.ts`): 대시보드 사이드바 및 모바일 시트 메뉴에 표시
-- **활성 링크**: `components/shared/nav-link.tsx`에서 현재 경로와 비교하여 활성 상태 표시
+- **MAIN_NAV** (`lib/constants.ts`): 마케팅 헤더 + `MobileNav` (Sheet 기반)에 표시
+- **FOOTER_NAV** (`lib/constants.ts`): 마케팅 푸터에 표시 (children 중첩 구조 지원)
+- **SIDEBAR_NAV** (`lib/constants.ts`): 대시보드 사이드바 (`DashboardSidebar`) + 모바일 Sheet에 표시
+- **활성 링크**: `NavLink` 컴포넌트가 `usePathname()`으로 현재 경로와 비교, `activeClassName` prop으로 커스터마이징
+- **외부 링크**: `NavItem`의 `external: true` 설정 시 `<a target="_blank" rel="noopener noreferrer">` 렌더링
+
+## MCP 서버 구성 (`.mcp.json`)
+
+| 서버 | 용도 |
+|------|------|
+| `playwright` | 브라우저 자동화 및 UI 테스트 |
+| `context7` | 라이브러리 최신 문서 조회 |
+| `sequential-thinking` | 복잡한 문제 단계적 분석 |
 
 ## 주의사항
 
